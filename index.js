@@ -11,19 +11,25 @@ const userScissors = document.getElementById("scissors")
 // 3 buttons für user
 // 
 // user button rock:
-userRock.addEventListener("click", function(_rock) {
+userRock.addEventListener("click", function() {
     console.log("button clicked!")
 })
-
-userPaper.addEventListener("click", function(_paper) {
+// user button paper:
+userPaper.addEventListener("click", function() {
     console.log("button clicked!")
 })
-
-userScissors.addEventListener("click", function(_scissors) {
+// user button scissors:
+userScissors.addEventListener("click", function() {
     console.log("button clicked!")
 })
 
 // computer generiert random move
+// 
+function botRandomMove() {
+    return Math.floor(Math.random() * 3)
+}
+
+console.log(botRandomMove())
 // wer gewinnt die runde ?
 // counter score wer vorne liegt
 // nach 3 runden wer gewinnt das game
