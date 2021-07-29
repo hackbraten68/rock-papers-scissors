@@ -43,7 +43,7 @@ userScissors.addEventListener("click", function() {
 // computer generiert random move
 // 
 function botRandomMove() {
-    
+    botRandom = Math.floor(Math.random() * 3)
         if (botRandom === 0) {
             return "Bot choose: ROCK!"
         }   else if (botRandom === 1) {
@@ -61,6 +61,7 @@ function whoWonRound() {
     if (userMove === 0 && botRandom === 2) {
         return "ROCK beats SCISSORS"
     } else if (userMove === 0 && botRandom === 1) {
+        // OR
         return "PAPER beats ROCK"
     } else if (userMove === botRandom) {
         return "TIE GAME !"
